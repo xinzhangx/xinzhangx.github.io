@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Defense</title>
+    <style>
+        body { background: #222; color: #fff; text-align: center; margin: 0; }
+        #gameCanvas { background: #333; display: block; margin: 20px auto; border: 2px solid #fff; }
+        #ui { font-size: 1.2em; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Zombie Defense</h1>
+    <div id="difficulty-select" style="margin: 20px;">
+        <label for="difficulty">Choose Difficulty: </label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <button id="startGameBtn">Start Game</button>
+    </div>
+    <canvas id="gameCanvas" width="800" height="500" style="display:none;"></canvas>
+    <div id="ui" style="display:none;">
+        Coins: <span id="coinCount">0</span> | Gun: <span id="gunLevel">Basic</span>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
